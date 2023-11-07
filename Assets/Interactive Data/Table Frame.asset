@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95696845ead266f4a9cd2cbb8f4e1d6f, type: 3}
+  m_Name: Table Frame
+  m_EditorClassIdentifier: 
+  type: 3
+  startsOn: 1
+  inventoryName: 
+  inventoryIcon: {fileID: 0}
+  requirements:
+  - {fileID: 11400000, guid: 3a1a9f5948fde2a4394f9334ee914092, type: 2}
+  - {fileID: 11400000, guid: 75472ae4c8823cf43be2a7ef22a6d7b7, type: 2}
+  - {fileID: 11400000, guid: bea2597378fb26344912af9feb5cdbd8, type: 2}
+  - {fileID: 11400000, guid: b4a2ff81c42134e46814b27edd07505f, type: 2}
+  - {fileID: 11400000, guid: cdafb803eb570e84e985cd2a2f7760ca, type: 2}
+  - {fileID: 11400000, guid: d5116cee2ec55424b99028a025657d8d, type: 2}
+  requirementsMessage: Something is written
+  interactionMessages: []
