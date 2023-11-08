@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactiveData: {fileID: 11400000, guid: 83c13320ea7462e43880f6ae590a7f49, type: 2}
-  isOn: 0
+  isOn: 1
   onPicked:
     m_PersistentCalls:
       m_Calls: []
@@ -3778,7 +3778,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930815518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dcbbd0673380b14ea2f8c1b72a14837, type: 3}
+  m_Script: {fileID: 11500000, guid: a6f9b3aaa26a004449231d9be7253557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interactionPanel: {fileID: 876392002}

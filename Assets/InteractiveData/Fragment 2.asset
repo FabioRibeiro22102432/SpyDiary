@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95696845ead266f4a9cd2cbb8f4e1d6f, type: 3}
-  m_Name: Photo Fragment 4
+  m_Script: {fileID: 11500000, guid: 9c6e75bb832ef1b40bd68021cd0db586, type: 3}
+  m_Name: Fragment 2
   m_EditorClassIdentifier: 
   type: 0
   startsOn: 1
-  inventoryName: Photo Fragment
-  inventoryIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  inventoryName: Fragment
+  inventoryIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   requirements: []
   requirementsMessage: 
-  interactionMessages:
-  - Put in th frame
+  interactionMessages: []
