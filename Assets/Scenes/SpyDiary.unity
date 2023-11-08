@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -464,7 +464,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6844f94edc896e44ba69879f83a07bab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1722,7 +1722,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6844f94edc896e44ba69879f83a07bab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2443,6 +2443,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 421861642}
+  - component: {fileID: 421861644}
+  - component: {fileID: 421861643}
+  - component: {fileID: 421861645}
   m_Layer: 0
   m_Name: Photograph Fragment 1
   m_TagString: Untagged
@@ -2459,13 +2462,78 @@ Transform:
   m_GameObject: {fileID: 421861641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8227, y: 0.5199, z: 0.3324}
+  m_LocalPosition: {x: -4.683, y: 0.5199, z: 0.3324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1408000702}
   m_Father: {fileID: 250348107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &421861643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421861641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactiveData: {fileID: 11400000, guid: cf28018ceaf24424bb868ad60dfc7fd6, type: 2}
+  isOn: 0
+  onPicked:
+    m_PersistentCalls:
+      m_Calls: []
+  onRequirementsMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteracted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &421861644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421861641}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07865906, y: 0.0959999, z: 0.09460965}
+  m_Center: {x: -1.1099691, y: -0.0072481334, z: -0.006070003}
+--- !u!95 &421861645
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421861641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e942735cf0ee14148b39f6f8ce1128f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &424247677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,6 +3529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 686260078}
   - component: {fileID: 686260079}
+  - component: {fileID: 686260080}
   m_Layer: 0
   m_Name: Photograph Fragment 5
   m_TagString: Untagged
@@ -3505,6 +3574,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09683037, y: 0.044595003, z: 0.099967}
   m_Center: {x: -0.00096845627, y: -0.00001347065, z: -0.0043315887}
+--- !u!114 &686260080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686260077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactiveData: {fileID: 11400000, guid: f980a3b97eba7a44ea36922601e804c1, type: 2}
+  isOn: 0
+  onPicked:
+    m_PersistentCalls:
+      m_Calls: []
+  onRequirementsMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteracted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &701782944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,7 +5732,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6844f94edc896e44ba69879f83a07bab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6081,7 +6173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6844f94edc896e44ba69879f83a07bab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6301,6 +6393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357644153}
   - component: {fileID: 1357644155}
+  - component: {fileID: 1357644156}
   m_Layer: 0
   m_Name: Photograph Fragment 6
   m_TagString: Untagged
@@ -6345,6 +6438,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15, y: 0.08005431, z: 0.15}
   m_Center: {x: 0, y: 0.050636724, z: 0}
+--- !u!114 &1357644156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357644152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactiveData: {fileID: 11400000, guid: 6b1dc5bd83cc4dc4d87c83bfa0d8d680, type: 2}
+  isOn: 0
+  onPicked:
+    m_PersistentCalls:
+      m_Calls: []
+  onRequirementsMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteracted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1388773897
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,7 +6750,7 @@ Transform:
   m_GameObject: {fileID: 1408000701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.122, y: 0, z: 0}
+  m_LocalPosition: {x: -1.1147, y: -0.0123, z: -0.0014}
   m_LocalScale: {x: 0.03677942, y: 0.0036499, z: 0.038647376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6660,7 +6776,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6844f94edc896e44ba69879f83a07bab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7668,6 +7784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644554138}
   - component: {fileID: 1644554140}
+  - component: {fileID: 1644554141}
   m_Layer: 0
   m_Name: Photograph Frame
   m_TagString: Untagged
@@ -7713,8 +7830,31 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3267839, y: 0.15818098, z: 0.22328684}
-  m_Center: {x: 0.018570065, y: 0.007210538, z: -0.026108399}
+  m_Size: {x: 0.3267839, y: 0.20464829, z: 0.26318932}
+  m_Center: {x: 0.018570065, y: 0.03044419, z: -0.00615716}
+--- !u!114 &1644554141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644554137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactiveData: {fileID: 11400000, guid: fea1ad57bacb6c843a0d2c0636a70a07, type: 2}
+  isOn: 0
+  onPicked:
+    m_PersistentCalls:
+      m_Calls: []
+  onRequirementsMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteracted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1670094854
 GameObject:
   m_ObjectHideFlags: 0
@@ -8224,7 +8364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6844f94edc896e44ba69879f83a07bab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8445,8 +8585,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.48
-  m_fontSizeBase: 16.48
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9938,7 +10078,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b5ee3095680aa0a4fbb6881fd36cef52, type: 2}
+  - {fileID: 2100000, guid: c41521d10d174e043a9db5786059029c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9978,6 +10118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2077637292}
   - component: {fileID: 2077637293}
+  - component: {fileID: 2077637294}
   m_Layer: 0
   m_Name: Photograph Fragment 3
   m_TagString: Untagged
@@ -10022,6 +10163,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.10714352, y: 0.051258534, z: 0.109491825}
   m_Center: {x: -0.0012555718, y: 0.0073151365, z: 0.010739565}
+--- !u!114 &2077637294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077637291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactiveData: {fileID: 11400000, guid: 36d2eedd5d70b1e41afb1d8149941777, type: 2}
+  isOn: 0
+  onPicked:
+    m_PersistentCalls:
+      m_Calls: []
+  onRequirementsMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteracted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2096766648
 GameObject:
   m_ObjectHideFlags: 0
@@ -10242,6 +10406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2131873950}
   - component: {fileID: 2131873951}
+  - component: {fileID: 2131873952}
   m_Layer: 0
   m_Name: Photograph Fragment 4
   m_TagString: Untagged
@@ -10286,6 +10451,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.12564826, y: 0.038438275, z: 0.13342261}
   m_Center: {x: 0.0012253523, y: 0.03162414, z: 0.013189673}
+--- !u!114 &2131873952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131873949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactiveData: {fileID: 11400000, guid: b1f1d585d8a20b04fb9942e1c874984e, type: 2}
+  isOn: 0
+  onPicked:
+    m_PersistentCalls:
+      m_Calls: []
+  onRequirementsMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteracted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2137834181
 GameObject:
   m_ObjectHideFlags: 0
