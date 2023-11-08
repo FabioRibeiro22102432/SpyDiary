@@ -1,15 +1,15 @@
 using TMPro;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UI : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject _interactionPanel;
     [SerializeField] private TextMeshProUGUI _interactionMessage;
     [SerializeField] private Image[] _inventorySlots;
-    [SerializeField] private Image[] _inventoryItems;
-    [SerializeField] private float _NotSelectedItem;
-    [SerializeField] private float _selectedItem;
+    [SerializeField] private Image[] _inventoryIcons;
+    [SerializeField] private float _unselectedAlpha;
+    [SerializeField] private float _selectedAlpha;
 
     void Start()
     {
@@ -36,14 +36,14 @@ public class UI : MonoBehaviour
 
     public void HideInventoryIcons()
     {
-        foreach (Image image in _inventoryItems)
+        foreach (Image image in _inventoryIcons)
             image.enabled = false;
     }
 
     public void ShowInventoryIcon(int index, Sprite icon)
     {
-        _inventoryItems[index].sprite = icon;
-        _inventoryItems[index].enabled = true;
+        _inventoryIcons[index].sprite = icon;
+        _inventoryIcons[index].enabled = true;
     }
 
     public void SelectInventorySlot(int index)
@@ -51,14 +51,14 @@ public class UI : MonoBehaviour
         foreach (Image image in _inventorySlots)
         {
             Color color = image.color;
-            color.a = _NotSelectedItem;
+            color.a = _unselectedAlpha;
             image.color = color;
         }
 
         if (index != -1)
         {
             Color color = _inventorySlots[index].color;
-            color.a = _selectedItem;
+            color.a = _selectedAlpha;
 
             _inventorySlots[index].color = color;
         }
