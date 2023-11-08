@@ -2,36 +2,36 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _forwardAccel;
-    [SerializeField] private float _backwardAccel;
-    [SerializeField] private float _sideAccel;
-    [SerializeField] private float _gravityAccel;
-    [SerializeField] private float _jumpAccel;
-    [SerializeField] private float _maxForwardVelo;
-    [SerializeField] private float _maxBackwardVelo;
-    [SerializeField] private float _maxSideVelo;
-    [SerializeField] private float _maxFallVelo;
+    [SerializeField] private float _forwardAcceleration;
+    [SerializeField] private float _backwardAcceleration;
+    [SerializeField] private float _strafeAcceleration;
+    [SerializeField] private float _gravityAcceleration;
+    [SerializeField] private float _jumpAcceleration;
+    [SerializeField] private float _maxForwardVelocity;
+    [SerializeField] private float _maxBackwardVelocity;
+    [SerializeField] private float _maxStrafeVelocity;
+    [SerializeField] private float _maxFallVelocity;
     [SerializeField] private float _rotationVelocityFactor;
     [SerializeField] private float _maxHeadUpAngle;
     [SerializeField] private float _minHeadDownAngle;
 
     private CharacterController _controller;
-    private Transform _head;
-    private Vector3 _acceleration;
-    private Vector3 _velocity;
-    private Vector3 _motion;
-    private bool _startJump;
-    private float _sinPI4;
+    private Transform   _head;
+    private Vector3     _acceleration;
+    private Vector3     _velocity;
+    private Vector3     _motion;
+    private bool        _startJump;
+    private float       _sinPI4;
 
     void Start()
     {
-        _controller = GetComponent<CharacterController>();
-        _head = GetComponentInChildren<Camera>().transform;
-        _acceleration = Vector3.zero;
-        _velocity = Vector3.zero;
-        _motion = Vector3.zero;
-        _startJump = false;
-        _sinPI4 = Mathf.Sin(Mathf.PI / 4);
+        _controller     = GetComponent<CharacterController>();
+        _head           = GetComponentInChildren<Camera>().transform;
+        _acceleration   = Vector3.zero;
+        _velocity       = Vector3.zero;
+        _motion         = Vector3.zero;
+        _startJump      = false;
+        _sinPI4         = Mathf.Sin(Mathf.PI / 4);
 
         HideCursor();
     }
@@ -94,21 +94,21 @@ public class PlayerMovement : MonoBehaviour
         float forwardAxis = Input.GetAxis("Forward");
 
         if (forwardAxis > 0f)
-            _acceleration.z = _forwardAccel;
+            _acceleration.z = _forwardAcceleration;
         else if (forwardAxis < 0f)
-            _acceleration.z = _backwardAccel;
+            _acceleration.z = _backwardAcceleration;
         else
             _acceleration.z = 0f;
     }
 
     private void UpdateStrafeAcceleration()
     {
-        float strafeAxis = Input.GetAxis("Side");
+        float strafeAxis = Input.GetAxis("Strafe");
 
         if (strafeAxis > 0f)
-            _acceleration.x = _sideAccel;
+            _acceleration.x = _strafeAcceleration;
         else if (strafeAxis < 0f)
-            _acceleration.x = -_sideAccel;
+            _acceleration.x = -_strafeAcceleration;
         else
             _acceleration.x = 0f;
     }
@@ -116,9 +116,9 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateVerticalAcceleration()
     {
         if (_startJump)
-            _acceleration.y = _jumpAccel;
+            _acceleration.y = _jumpAcceleration;
         else
-            _acceleration.y = _gravityAccel;
+            _acceleration.y = _gravityAcceleration;
     }
 
     private void UpdateVelocity()
@@ -128,21 +128,21 @@ public class PlayerMovement : MonoBehaviour
         if (_acceleration.z == 0f || _acceleration.z * _velocity.z < 0f)
             _velocity.z = 0f;
         else if (_velocity.x == 0f)
-            _velocity.z = Mathf.Clamp(_velocity.z, _maxBackwardVelo, _maxForwardVelo);
+            _velocity.z = Mathf.Clamp(_velocity.z, _maxBackwardVelocity, _maxForwardVelocity);
         else
-            _velocity.z = Mathf.Clamp(_velocity.z, _maxBackwardVelo * _sinPI4, _maxForwardVelo * _sinPI4);
-
+            _velocity.z = Mathf.Clamp(_velocity.z, _maxBackwardVelocity * _sinPI4, _maxForwardVelocity * _sinPI4);
+       
         if (_acceleration.x == 0f || _acceleration.x * _velocity.x < 0f)
             _velocity.x = 0f;
         else if (_velocity.z == 0f)
-            _velocity.x = Mathf.Clamp(_velocity.x, -_maxSideVelo, _maxSideVelo);
+            _velocity.x = Mathf.Clamp(_velocity.x, -_maxStrafeVelocity, _maxStrafeVelocity);
         else
-            _velocity.x = Mathf.Clamp(_velocity.x, -_maxSideVelo * _sinPI4, _maxSideVelo * _sinPI4);
+            _velocity.x = Mathf.Clamp(_velocity.x, -_maxStrafeVelocity * _sinPI4, _maxStrafeVelocity * _sinPI4);
 
         if (_controller.isGrounded && !_startJump)
             _velocity.y = -0.1f;
         else
-            _velocity.y = Mathf.Max(_velocity.y, _maxFallVelo);
+            _velocity.y = Mathf.Max(_velocity.y, _maxFallVelocity);
 
         _startJump = false;
     }
