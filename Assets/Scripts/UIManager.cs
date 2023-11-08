@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject         _interactionPanel;
-    [SerializeField] private TextMeshProUGUI    _interactionMessage;
-    [SerializeField] private Image[]            _inventorySlots;
-    [SerializeField] private Image[]            _inventoryIcons;
-    [SerializeField] private float              _unselectedAlpha;
-    [SerializeField] private float              _selectedAlpha;
+    [SerializeField] private GameObject _interactionPanel;
+    [SerializeField] private TextMeshProUGUI _interactionMessage;
+    [SerializeField] private Image[] _inventorySlots;
+    [SerializeField] private Image[] _inventoryIcons;
+    [SerializeField] private float _unselectedAlpha;
+    [SerializeField] private float _selectedAlpha;
 
     void Start()
     {
@@ -42,8 +42,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowInventoryIcon(int index, Sprite icon)
     {
-        _inventoryIcons[index].sprite   = icon;
-        _inventoryIcons[index].enabled  = true;
+        _inventoryIcons[index].sprite = icon;
+        _inventoryIcons[index].enabled = true;
     }
 
     public void SelectInventorySlot(int index)
@@ -51,14 +51,14 @@ public class UIManager : MonoBehaviour
         foreach (Image image in _inventorySlots)
         {
             Color color = image.color;
-            color.a     = _unselectedAlpha;
+            color.a = _unselectedAlpha;
             image.color = color;
         }
 
         if (index != -1)
         {
             Color color = _inventorySlots[index].color;
-            color.a     = _selectedAlpha;
+            color.a = _selectedAlpha;
 
             _inventorySlots[index].color = color;
         }
