@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c6e75bb832ef1b40bd68021cd0db586, type: 3}
-  m_Name: Frame 4
+  m_Name: Picture Frame 1
   m_EditorClassIdentifier: 
-  type: 0
+  type: 3
   startsOn: 1
-  inventoryName: Frame
-  inventoryIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  requirements: []
-  requirementsMessage: 
-  interactionMessages:
-  - Frame the picture
+  inventoryName: 
+  inventoryIcon: {fileID: 0}
+  requirements:
+  - {fileID: 11400000, guid: fb86cf96d31c4014a8a8f0c0c5a5bbf2, type: 2}
+  requirementsMessage: Somehting is missing
+  interactionMessages: []
