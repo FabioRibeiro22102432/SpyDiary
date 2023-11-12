@@ -16,6 +16,10 @@ MonoBehaviour:
   startsOn: 1
   inventoryName: 
   inventoryIcon: {fileID: 0}
-  requirements: []
+  requirements:
+  - {fileID: 11400000, guid: 8ea4a030678bc7e44a8d3b5b079c5ced, type: 2}
+  - {fileID: 11400000, guid: fa6b66669d4a3c443b2624075e9d3651, type: 2}
+  - {fileID: 11400000, guid: ca16c5f68be9f1b4994b0c5c6ca0e263, type: 2}
+  - {fileID: 11400000, guid: 55205a25e050b184ea32c566e79109b3, type: 2}
   requirementsMessage: 
   interactionMessages: []
