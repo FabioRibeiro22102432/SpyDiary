@@ -102,7 +102,7 @@ public class Interactive : MonoBehaviour
     {
         if (direct && IsType(InteractiveData.Type.Indirect))
             return;
-        else if (IsType(InteractiveData.Type.Pickable))
+        else if (IsType(InteractiveData.Type.Pickable) && !_playerInventory.IsFull())
         {
             _playerInventory.Add(this);
             gameObject.SetActive(false); 

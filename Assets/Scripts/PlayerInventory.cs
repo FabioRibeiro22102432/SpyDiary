@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private UIManager _uiManager;
+    [SerializeField] private int _maxItems;
 
     private PlayerInteraction   _playerInteraction;
     private List<Interactive>   _inventory;
@@ -42,6 +43,11 @@ public class PlayerInventory : MonoBehaviour
     public bool Contains(Interactive item)
     {
         return _inventory.Contains(item);
+    }
+
+    public bool IsFull()
+    {
+        return _inventory.Count == _maxItems;
     }
 
     private void SelectInventorySlot(int index)
