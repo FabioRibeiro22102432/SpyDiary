@@ -18,5 +18,5 @@ MonoBehaviour:
   inventoryIcon: {fileID: 0}
   requirements:
   - {fileID: 11400000, guid: fb86cf96d31c4014a8a8f0c0c5a5bbf2, type: 2}
-  requirementsMessage: Somehting is missing
+  requirementsMessage: Something is missing
   interactionMessages: []
