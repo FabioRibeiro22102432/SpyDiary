@@ -20,3 +20,4 @@ MonoBehaviour:
   requirementsMessage: 
   interactionMessages:
   - Open
+  - Close
