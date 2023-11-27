@@ -2343,7 +2343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33878a26c94ee8e429d10a6afda70d4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.326
+      value: 1.193
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33878a26c94ee8e429d10a6afda70d4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2548,7 +2548,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.9457127, b: 0.60754716, a: 1}
   m_Intensity: 1
-  m_Range: 4.5
+  m_Range: 2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5389,7 +5389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactiveData: {fileID: 0}
+  _interactiveData: {fileID: 11400000, guid: ca16c5f68be9f1b4994b0c5c6ca0e263, type: 2}
   isOn: 0
   onPicked:
     m_PersistentCalls:
@@ -10578,7 +10578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactiveData: {fileID: 0}
+  _interactiveData: {fileID: 11400000, guid: 55205a25e050b184ea32c566e79109b3, type: 2}
   isOn: 0
   onPicked:
     m_PersistentCalls:
@@ -13197,7 +13197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactiveData: {fileID: 0}
+  _interactiveData: {fileID: 11400000, guid: fa6b66669d4a3c443b2624075e9d3651, type: 2}
   isOn: 0
   onPicked:
     m_PersistentCalls:
@@ -18278,7 +18278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactiveData: {fileID: 0}
+  _interactiveData: {fileID: 11400000, guid: 8ea4a030678bc7e44a8d3b5b079c5ced, type: 2}
   isOn: 0
   onPicked:
     m_PersistentCalls:
