@@ -4287,8 +4287,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.041057393, y: 0.02829199, z: 0.050448555}
-  m_Center: {x: -0.0025736582, y: 0.003963501, z: -0.0050815493}
+  m_Size: {x: 0.041057393, y: 0.024719791, z: 0.050448555}
+  m_Center: {x: -0.0025736582, y: 0.010182401, z: -0.0050815493}
 --- !u!95 &421861645
 Animator:
   serializedVersion: 5
@@ -15333,7 +15333,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1644554138}
   - component: {fileID: 1644554140}
-  - component: {fileID: 1644554141}
   m_Layer: 0
   m_Name: Photograph Frame
   m_TagString: Untagged
@@ -15383,33 +15382,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.12446339, y: 0.034754783, z: 0.10796332}
   m_Center: {x: 0.00029334644, y: -0.003731713, z: -0.0015419216}
---- !u!114 &1644554141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644554137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc17a168097c2a42b08d13605604980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactiveData: {fileID: 11400000, guid: fea1ad57bacb6c843a0d2c0636a70a07, type: 2}
-  isOn: 0
-  onPicked:
-    m_PersistentCalls:
-      m_Calls: []
-  onRequirementsMet:
-    m_PersistentCalls:
-      m_Calls: []
-  onInteracted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1667962673
 GameObject:
   m_ObjectHideFlags: 0
@@ -19967,8 +19943,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16043031, y: 0.103662655, z: 0.16171741}
-  m_Center: {x: 0.0032821298, y: 0.033517197, z: -0.0035991669}
+  m_Size: {x: 0.0530828, y: 0.025701834, z: 0.053212285}
+  m_Center: {x: -0.016929796, y: -0.0054631997, z: 0.023331057}
 --- !u!114 &2077637294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20491,8 +20467,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16586256, y: 0.11616215, z: 0.19728136}
-  m_Center: {x: -0.016472578, y: 0.07048608, z: 0.035324097}
+  m_Size: {x: 0.06780719, y: 0.012940597, z: 0.06106649}
+  m_Center: {x: 0.0133564705, y: 0.018875241, z: 0.01642445}
 --- !u!114 &2131873952
 MonoBehaviour:
   m_ObjectHideFlags: 0
