@@ -22,4 +22,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ca16c5f68be9f1b4994b0c5c6ca0e263, type: 2}
   - {fileID: 11400000, guid: 55205a25e050b184ea32c566e79109b3, type: 2}
   requirementsMessage: I need to get this opened
-  interactionMessages: []
+  interactionMessages:
+  - Open
+  - Close
