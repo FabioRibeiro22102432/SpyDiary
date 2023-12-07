@@ -19,4 +19,6 @@ MonoBehaviour:
   requirements:
   - {fileID: 11400000, guid: 8aecc91c5ab7bc74086df8d92c2500a4, type: 2}
   requirementsMessage: I need a key
-  interactionMessages: []
+  interactionMessages:
+  - Open
+  - Close
