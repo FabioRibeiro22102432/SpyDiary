@@ -49,7 +49,7 @@ public class InteractableObject : MonoBehaviour
     // You might want to check for player input to open the UI, like pressing a key.
 
     // Example:
-     private void Update()
+     public void Update()
      {
          if (Input.GetKeyDown(KeyCode.E))
          {
