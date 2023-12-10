@@ -24,7 +24,7 @@ public class InteractableObject : MonoBehaviour
     void Update()
     {
         // Check for user input (e.g., mouse click)
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey("e"))
         {
             // Cast a ray from the screen point where the user clicked
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
