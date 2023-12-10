@@ -1,60 +1,79 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
 {
-    public Canvas uiCanvas; // Reference to your UI Canvas
-    public Text uiText; // Reference to any Text component you want to update on the UI
+    public GameObject uiPanel;
+    private bool isCursorLocked = true;
+
 
     private void Start()
     {
-        // Disable the UI canvas on start
-        if (uiCanvas != null)
+
+    
+
+        // Lock the cursor at the start
+        LockCursor();
+
+        // Disable the UI panel at the start
+        if (uiPanel != null)
         {
-            uiCanvas.gameObject.SetActive(false);
+            uiPanel.SetActive(false);
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    void Update()
     {
-        if (other.CompareTag("Player")) // Adjust the tag as needed
+        // Check for user input (e.g., mouse click)
+        if (Input.GetMouseButtonDown(0))
         {
-            // Show UI when the player enters the trigger zone
-            if (uiCanvas != null)
-            {
-                uiCanvas.gameObject.SetActive(true);
-            }
+            // Cast a ray from the screen point where the user clicked
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-            // Optionally update UI text
-            if (uiText != null)
+            // Check if the ray hits the object with a collider
+            if (Physics.Raycast(ray, out hit))
             {
-                uiText.text = "Press 'E' to interact";
+                // Check if the hit object is the interactable object
+                if (hit.collider.gameObject == gameObject)
+                {
+                    // Toggle the UI panel and cursor lock state
+                    ToggleUIPanelAndCursorLock();
+                }
             }
         }
     }
 
-    public void OnTriggerExit(Collider other)
+    void ToggleUIPanelAndCursorLock()
     {
-        if (other.CompareTag("Player"))
+        // Toggle the state of the UI panel
+        if (uiPanel != null)
         {
-            // Hide UI when the player exits the trigger zone
-            if (uiCanvas != null)
-            {
-                uiCanvas.gameObject.SetActive(false);
-            }
+            uiPanel.SetActive(!uiPanel.activeSelf);
         }
+
+        // Toggle the state of cursor lock
+        isCursorLocked = !isCursorLocked;
+
+        // Enable or disable the cursor lock based on the state
+        if (isCursorLocked)
+        {
+            LockCursor();
+        }
+        else
+        {
+            UnlockCursor();
+        }
+
+    }
+    void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    // Add any additional logic for interaction (e.g., opening a door, triggering an event) here
-    // You might want to check for player input to open the UI, like pressing a key.
-
-    // Example:
-     public void Update()
-     {
-         if (Input.GetKeyDown(KeyCode.E))
-         {
-            // Handle UI opening logic here
-         }
-     }
+    void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 }
-
