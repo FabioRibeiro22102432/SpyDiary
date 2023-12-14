@@ -47,7 +47,7 @@ public class Grabber : MonoBehaviour
             {
                 selectedObject.transform.rotation = Quaternion.Euler(new Vector3(
                     selectedObject.transform.rotation.eulerAngles.x,
-                    selectedObject.transform.rotation.eulerAngles.y + 90f,
+                    selectedObject.transform.rotation.eulerAngles.y + 45f,
                     selectedObject.transform.rotation.eulerAngles.z));
             }
         }
