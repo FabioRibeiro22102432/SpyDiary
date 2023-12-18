@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 6335e79bc5d63e448bbb670b5e445731
+  - enabled: 1
+    path: Assets/Scenes/SpyDiary.unity
+    guid: 8d0833327ac12a24bb57ecafd016e78f
   m_configObjects: {}
