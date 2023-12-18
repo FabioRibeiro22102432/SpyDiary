@@ -18,4 +18,5 @@ MonoBehaviour:
   inventoryIcon: {fileID: 21300000, guid: e97d14588e45f2f448e126f7cdc651cc, type: 3}
   requirements: []
   requirementsMessage: 
-  interactionMessages: []
+  interactionMessages:
+  - Place Morse Sheet
