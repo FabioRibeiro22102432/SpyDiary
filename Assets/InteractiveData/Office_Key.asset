@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   startsOn: 1
   inventoryName: Gabinet Key
-  inventoryIcon: {fileID: 0}
+  inventoryIcon: {fileID: 21300000, guid: 6586202f47a2c324693b8b2611f62534, type: 3}
   requirements: []
   requirementsMessage: 
   interactionMessages:
