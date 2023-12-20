@@ -17,5 +17,6 @@ MonoBehaviour:
   inventoryName: 
   inventoryIcon: {fileID: 0}
   requirements: []
-  requirementsMessage: Why does have a german passport?
-  interactionMessages: []
+  requirementsMessage: Nothing
+  interactionMessages:
+  - Why does have a german passport?
