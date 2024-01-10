@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-3725887092797378716
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pick Up item
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 0600ca223be909f41a7b4c2450f16f4b
+  m_Children: []
+  m_Volume: 3cf79adc0780a57468134329a875d110
+  m_Pitch: bc88ebaabaa94684a8800c7fe7162532
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2650189073605486595}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-2650189073605486595
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 6de00a3296dace147a0a4cd45ea84cc1
+  m_EffectName: Attenuation
+  m_MixLevel: db38096d69cbe1748b164296a5664e42
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-1244873068004617485
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -36,6 +69,7 @@ AudioMixerController:
     - 4834b699119275a4abaff5b7f0de67fd
     - cbbdf2e1f3eed5b4ba9c60e534860ca9
     - 28e6d7b27d9f6794d8e81d39bd6f6b06
+    - 0600ca223be909f41a7b4c2450f16f4b
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -52,6 +86,7 @@ AudioMixerGroupController:
   - {fileID: 7389403559609201954}
   - {fileID: 2825600682758301760}
   - {fileID: 5861093180483215296}
+  - {fileID: -3725887092797378716}
   m_Volume: a416f0c1c9e7624478b39996e2d94115
   m_Pitch: 2d2ea4e7315071743ac4972e60918e1b
   m_Send: 00000000000000000000000000000000
@@ -85,6 +120,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 980121f401632b34ab5617bc427075cc
   m_FloatValues:
+    73fa8e41928d62644bf622e8b26410cf: -10.345207
     42e63dd2ef2141a43bff80a5b11d208e: -35.30951
   m_TransitionOverrides: {}
 --- !u!243 &2825600682758301760
